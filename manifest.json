@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "顏色選擇器",
+    "version": "1.0",
+    "description": "一個簡單的網頁顏色選擇工具",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "eyedropper"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "all_frames": true
+        }
+    ]
+}
