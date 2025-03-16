@@ -66,11 +66,7 @@ function startColorPicker() {
             return '#' + values.map(x => parseInt(x).toString(16).padStart(2, '0')).join('');
         };
 
-        const hexColor = rgbToHex(color);
-        // 複製顏色代碼到剪貼板
-        navigator.clipboard.writeText(hexColor).then(() => {
-            alert(`顏色 ${hexColor} 已複製到剪貼板！`);
-        });
+
 
         // 清理
         isPickerActive = false;
